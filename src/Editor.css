@@ -1,0 +1,216 @@
+.body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+#root{
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+.parent{
+    padding: 0 12px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    background-image: url('vidar-nordli-mathisen-DWM0vwyEAX0-unsplash.jpg');
+    background-size: cover;
+    z-index: 0;
+}
+.navParent{
+    padding: 0 26px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(34, 44, 49);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+}
+.navComponents{
+    margin: 0;
+    padding: 12px 16px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.hamburger{
+    border: none;
+    background-color: rgb(34, 44, 49);
+    display: none;
+}
+.pageTitle{
+    font-size: 28px;
+    margin: 0;
+}
+.odd{
+    color: white;
+}
+.portfolio{
+    border: none;
+    background-color: rgb(34, 44, 49);
+}
+.linkedin{
+    border: none;
+    background-color: rgb(34, 44, 49);
+}
+.insta{
+    border: none;
+    background-color: rgb(34, 44, 49);
+}
+.top{
+    margin-top: 3%;
+    height: 45vh;
+    width: 100vw;
+    display: flex;
+    
+}
+.bottom{
+    height: 45vh;
+    width: 100%;
+    background-color: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+}
+.panel{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 8px 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(5px);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    color: white;
+    padding: 12px 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 16px;
+}
+.panelTitle{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.openClose{
+    margin-left: 6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000;
+    font-size: 12px;
+}
+.openClose:hover{
+    cursor: pointer;
+}
+.panel.collapsed{
+    flex-grow: 0;
+}
+.panel.collapsed.CodeMirror-scroll{
+    position: absolute;
+}
+.CodeMirror{
+    height: 100% !important;
+}
+.CodeMirror-wrap pre{
+    word-break: break-word !important;
+}
+.codeWrapper{
+    flex-grow: 1;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow: hidden;
+    cursor: text;
+}
+.navComponentTitle{
+    font-size: 12px;
+    display: none;
+}
+.closeMenu{
+    display: none;
+    border: none;
+    background-color: rgb(34, 44, 49);
+}
+@media screen and (max-width:950px) {
+    .pageTitle{
+        font-size: 24px;
+    }
+    .panelTitle{
+        font-size: 18px;
+    }
+    .navComponents{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        position: absolute;
+        z-index: 100;
+        top: 100%;
+        right: 0%;
+        background-color: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(10px);
+        width: 120px;
+        height: 100vh;
+        transform: translateX(100%);
+    }
+    @keyframes menuAnim {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+    @keyframes menuAnimClose {
+        0%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(100%);
+        }
+    }
+    .linkedin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background-color: hsl(0 0% 100% / 0);
+    }
+    .insta{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background-color: hsl(0 0% 100% / 0);
+    }
+    .portfolio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background-color: hsl(0 0% 100% / 0);
+    }
+    .navComponentTitle{
+        display: block;
+    }
+    .hamburger{
+        display: block;
+    }
+}
